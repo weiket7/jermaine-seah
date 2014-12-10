@@ -1,0 +1,52 @@
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  color: #f75050;
+  margin-top: 40px;
+}
+
+header {
+  height: 50px;
+}
+
+
+.navbar {
+  min-height: 50px;
+}
+
+.grid-text {
+  background:#fff;
+  padding: 20px 30px 20px 30px;
+  margin-bottom: 30px;
+  font-size:16px;
+}
+
+.grid-text .title {
+  font-family: 'Montserrat', sans-serif;
+  font-size:24px;
+  line-height:34px;
+  font-weight:bold;
+  text-transform:uppercase;
+  color:#0e0e0e;
+}
+
+.grid-text .title:hover {
+  color:#f75050;
+}
+
+.blog-posts li {
+  width:100%;
+}
+
+.img-container {
+  height: 300px;
+}
+
+body {
+  background-color: #eeeef4;
+}
+
+img {
+  width: auto;
+}
