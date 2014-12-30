@@ -20,7 +20,7 @@
 		<tbody>
 			@foreach($sliders as $s)
 				<tr>
-					<td>{{HTML::image('img/sliders/'.$s->image, null, ['height'=>'100px', 'style'=>'width:auto'])}}</td>
+					<td>{{HTML::image('img/slider/'.$s->image, null, ['height'=>'100px', 'style'=>'width:auto'])}}</td>
 					<td>{{link_to('admin/slider/update/'.$s->id, $s->caption)}}</td>
 					<td>{{$s->subcaption}}</td>
 				</tr>

@@ -51,7 +51,7 @@ class SliderController extends BaseController {
 
 	 	if (isset($input['delete'])) {
 			$slider->delete();
-			return Redirect::to('admin/post')->with('msg', 'Slider deleted');
+			return Redirect::to('admin/slider')->with('msg', 'Slider deleted');
 		}
 
 	 	$slider->caption = $input['caption'];
