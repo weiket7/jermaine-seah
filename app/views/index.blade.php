@@ -47,7 +47,7 @@
         @foreach($posts as $key => $p)   
           @if($p->column == 'N')
             <div class='grid-img'>
-              <a href="{{URL::to('post/'.$p->id)}}">{{HTML::image('img/blog/'.$p->image) }}</a>
+              <a href="{{URL::to('post/'.$p->id)}}">{{HTML::image('img/blog/'.$p->image, '', ['class'=>'img-max-width']) }}</a>
             </div>     
             <div class='grid-text'>
               {{$p->tags}}<br>
@@ -71,7 +71,7 @@
         @foreach($posts as $key => $p)   
           @if($p->column == 'H')
             <div class='grid-img'>
-              <a href="{{URL::to('post/'.$p->id)}}">{{HTML::image('img/blog/'.$p->image) }}</a>
+              <a href="{{URL::to('post/'.$p->id)}}">{{HTML::image('img/blog/'.$p->image, '', ['class'=>'img-max-width']) }}</a>
             </div>     
             <div class='grid-text'>
               {{$p->tags}}<br>

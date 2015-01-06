@@ -7,10 +7,29 @@
 tinymce.init({
  	selector:'.tinymce',
   plugins: [
-         "jbimages"
+         "jbimages", "link"
    ],
    width: 700,
    relative_urls: false
+});
+
+$(document).ready( function() {
+  $("#val").validate({
+    rules: {
+      title: { required: true},
+      //image: { required: true},
+      content: { required: true },
+      category: { required: true},
+      column: { required: true},
+    },
+    messages: {
+      title: { required: "Required"},
+      //image: { required: "Required"},
+      content: { required: "Required" },
+      category: { required: "Required"},
+      column: { required: "Required"},
+    }
+  });
 });
 </script>
 
@@ -58,14 +77,14 @@ tinymce.init({
 			<tr>
 				<td>{{ Form::label('category', 'Category') }}</td>
 				<td>
-					<?php $category_arr = array('P'=>"Property Market", 'L'=>"New Launches", 'I'=>"Infrastructure") ?>
+					<?php $category_arr = array(''=>'', 'P'=>"Property Market", 'L'=>"New Launches", 'I'=>"Infrastructure") ?>
 			  	{{ Form::select('category', $category_arr, $post->category, ['class'=>'form-control']) }}
 				</td>
 			</tr>
 			<tr>
 				<td>{{ Form::label('column', 'Column') }}</td>
 				<td>
-					<?php $column_arr = array('N'=>"What's New", 'H'=>"What's Hot") ?>
+					<?php $column_arr = array(''=>'', 'N'=>"What's New", 'H'=>"What's Hot") ?>
 			  	{{ Form::select('column', $column_arr, $post->column, ['class'=>'form-control']) }}
 				</td>
 			</tr>

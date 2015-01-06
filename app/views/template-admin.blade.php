@@ -19,7 +19,9 @@
   <link href="img/favicon.png" rel="icon" type="image/png">
 
   <!-- Bootstrap -->
+  <script src="{{asset('js/jquery.min.js') }}"></script>
   <link href="{{URL::to('/')}}/css/bootstrap.css" rel="stylesheet">
+  <link href="{{URL::to('/')}}/css/admin-custom.css" rel="stylesheet">
 </head>       
 <body>
   <div class='container'>
