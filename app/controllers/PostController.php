@@ -29,6 +29,7 @@ class PostController extends BaseController {
 		$post->popular = $input['popular'];
 		$post->category = $input['category'];
 		$post->column = $input['column'];
+		$post->stat = $input['stat'];
 
 		$destinationPath = $_SERVER['DOCUMENT_ROOT'] . "/img/blog/";	
 		if (Input::hasFile('image')) {
@@ -67,6 +68,7 @@ class PostController extends BaseController {
 	 	$post->popular = $input['popular'];
 	 	$post->category = $input['category'];
 	 	$post->column = $input['column'];
+		 $post->stat = $input['stat'];
 
 	 	$destinationPath = $_SERVER['DOCUMENT_ROOT'] . "/img/blog/";	
 		if (Input::hasFile('image')) {
@@ -79,5 +81,21 @@ class PostController extends BaseController {
 		$post->save();
  	  return Redirect::to('admin/post')->with('msg', 'Post updated');
   }
+
+	public function order() {
+		$data = array(
+			'posts'=>Post::orderBy('pos')->where('stat', 'P')->get(),
+			'sliders'=>Slider::all(),
+		);
+		if (Request::isMethod('post')) {
+			foreach($data['posts'] as $p) {
+				$pos = $_POST['pos'.$p->id];
+				$s = "update post set pos = $pos where id = ".$p->id;
+				DB::statement($s);
+			}
+			return Redirect::to('admin/post/order')->with('msg', 'Order saved');;
+		}
+		$this->layout->content = View::make('post-order', $data);
+	}
 
 }

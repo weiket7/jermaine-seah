@@ -20,12 +20,12 @@ Route::group(array('prefix' => 'admin'), function()
 	Route::post('post/create', 'PostController@createPost');
 	Route::get('post/update/{post}', 'PostController@update');
 	Route::post('post/update', 'PostController@updatePost');
+	Route::get('post/order', 'PostController@order');
+	Route::post('post/order', 'PostController@order');
 
 	Route::get('slider', 'SliderController@index');
 	Route::get('slider/create', 'SliderController@create');
 	Route::post('slider/create', 'SliderController@createPost');
 	Route::get('slider/update/{slider}', 'SliderController@update');
 	Route::post('slider/update', 'SliderController@updatePost');
-}); 
-
-?>
+});

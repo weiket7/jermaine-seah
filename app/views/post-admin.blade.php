@@ -3,6 +3,7 @@
 <h1>Post</h1>
 
 {{HTML::link('admin/post/create', "Create Post", ['class'=>'btn btn-primary'])}}
+{{HTML::link('admin/post/order', "Order", ['class'=>'btn btn-primary'])}}
 <br><br>
 
 @if ($posts->isEmpty())
@@ -17,6 +18,7 @@
 				<th>Sub Content</th>
 				<th>Tags</th>
 				<th>Popular</th>
+				<th>Position</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -27,6 +29,7 @@
 					<td>{{$p->subcontent}}</td>
 					<td>{{$p->tags}}</td>
 					<td>{{$p->popular == '1' ? 'Yes' : 'No'}}</td>
+					<td>{{$p->pos}}</td>
 				</tr>
 			@endforeach
 	</tbody>

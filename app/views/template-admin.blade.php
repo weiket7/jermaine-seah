@@ -13,16 +13,21 @@
   <!--[if (gte IE 9)|!(IE)]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <![endif]--> 
+  <![endif]-->
 
   <!-- Favicon -->
   <link href="img/favicon.png" rel="icon" type="image/png">
 
   <!-- Bootstrap -->
   <script src="{{asset('js/jquery.min.js') }}"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <script type="text/javascript" src="{{URL::to('/')}}/js/bootstrap.js"></script>
+
+  <script src="{{asset('js/jquery.validate.min.js') }}"></script>
+
   <link href="{{URL::to('/')}}/css/bootstrap.css" rel="stylesheet">
   <link href="{{URL::to('/')}}/css/admin-custom.css" rel="stylesheet">
-</head>       
+</head>
 <body>
   <div class='container'>
 
@@ -42,10 +47,5 @@
 
   </div>
 
-  <!-- JavaScripts -->
-  <script type="text/javascript" src="{{URL::to('/')}}/js/jquery.min.js"></script>                                                     
-  <script type="text/javascript" src="{{URL::to('/')}}/js/bootstrap.js"></script>  
-                                      
-  <script src="{{asset('js/jquery.validate.min.js') }}"></script>
 </body>
 </html>

@@ -125,7 +125,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 col-sm-4">
-            <p>© 2014 JERMAINE-SEAH.COM, DEVELOPED BY WEI KET</p>
+            <p>© 2014 JERMAINE-SEAH.COM, DEVELOPED BY WEI_KET@HOTMAIL.COM</p>
           </div>
           <!-- <div class="col-md-8 col-sm-8">     
             <ul>

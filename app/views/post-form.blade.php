@@ -110,6 +110,23 @@ $(document).ready( function() {
 			  </td>
 			</tr>
 			<tr>
+				<td>{{ Form::label('stat', 'Status') }}</td>
+				<td>
+					<?php $status_arr = array('D'=>'Draft', 'P'=>'Posted') ?>
+					@foreach($status_arr as $key => $s)
+						<label class='radio-inline' for='{{$s}}'>
+							@if ($key == $post->stat)
+								{{ Form::radio('stat', $key, true, array('id'=>$s)) }}
+							@else
+								{{ Form::radio('stat', $key, false, array('id'=>$s)) }}
+							@endif
+							{{$s}}
+						</label>
+					@endforeach
+					<label for='popular' class='error' />
+				</td>
+			</tr>
+			<tr>
 				<td>{{ Form::label('delete', 'Delete') }}</td>
 				<td>{{ Form::checkbox('delete') }}</td>
 			</tr>

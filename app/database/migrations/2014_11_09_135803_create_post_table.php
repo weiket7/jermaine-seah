@@ -22,9 +22,10 @@ class CreatePostTable extends Migration {
       $table->string('image', 50);
       $table->char('category', 1);
       $table->char('column', 1);
+      $table->char('stat', 1)->default('D');
       $table->char('popular', 1);
+      $table->smallInteger('pos');
       $table->timestamps();
-      $table->softDeletes();
     });
 
     $p = new Post();

@@ -7,7 +7,7 @@ class SiteController extends BaseController {
 	public function index()
 	{
 		$data = [
-			'posts' => Post::orderBy('created_at')->get(),
+			'posts' => Post::orderBy('pos')->where('stat', 'P')->get(),
 			'sliders'=>Slider::all()
 		];
 		$this->layout->content = View::make('index', $data);
